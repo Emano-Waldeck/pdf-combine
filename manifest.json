@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "version": "0.1.0",
+  "name": "PDF Combine - Convert and Merge",
+  "description": "Convert any file type to PDF format and merge them together",
+
+  "icons": {
+    "16": "data/icons/16.png",
+    "32": "data/icons/32.png",
+    "48": "data/icons/48.png",
+    "64": "data/icons/64.png",
+    "128": "data/icons/128.png",
+    "256": "data/icons/256.png",
+    "512": "data/icons/512.png"
+  },
+
+  "permissions": [
+    "storage",
+    "downloads",
+    "*://api2.online-convert.com/*"
+  ],
+
+  "homepage_url": "http://add0n.com/index.html",
+
+  "browser_action":{
+    "default_icon": {
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+    }
+  },
+
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "background.js"
+    ]
+  }
+}

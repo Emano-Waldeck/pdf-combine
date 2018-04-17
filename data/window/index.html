@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PDF Combiner</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body data-convert=false>
+    <form>
+      <template id="li"><li class="item">
+        <span class="drag-handle">☰</span>
+        <span data-id="name">File name</span>
+        <span data-id="status">Ready</span>
+        <span data-id="size">21323Kb</span>
+        <span data-id="type">application/pdf</span>
+        <span data-id="close" data-cmd="remove">✕</span>
+      </li></template>
+      <div id="list">
+        <ul></ul>
+        <label for="browse">
+        </label>
+        <input type="file" id="browse" multiple>
+      </div>
+      <div>
+        <input type="button" id="reload" value="Reset">
+        <input type="submit" value="Convert">
+        <span id="info"></span>
+      </div>
+    </form>
+
+    <script src="Sortable.js"></script>
+    <script src="index.js"></script>
+    <script src="convert.js"></script>
+  </body>
+</html>
