@@ -1,3 +1,4 @@
+/* globals config */
 'use strict';
 
 var Convert = function() {};
@@ -6,7 +7,7 @@ Convert.prototype.fetch = (url, {body, method = 'POST', headers = {}}) => fetch(
   method,
   cache: 'no-cache',
   headers: Object.assign({
-    'x-oc-api-key': window.atob('NmEyN2RmY2YyMjMxOWYwNTkwMzEzZWQ2OTM3ZDVkMDg='),
+    'x-oc-api-key': config.key
   }, headers),
   body
 }).then(r => {
@@ -42,7 +43,7 @@ Convert.prototype.open = function({category = 'document', target = 'pdf', proces
         target,
         options
       }],
-      process,
+      process
     })
   }).then(r => {
     this.r = r;

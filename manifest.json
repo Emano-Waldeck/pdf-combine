@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "version": "0.1.0",
+  "version": "0.1.2",
   "name": "PDF Combine - Convert and Merge",
-  "description": "Convert any file type to PDF format and merge them together",
+  "description": "Convert and merge multiple files with different formats into a single PDF document",
 
   "icons": {
     "16": "data/icons/16.png",
@@ -20,7 +20,7 @@
     "*://api2.online-convert.com/*"
   ],
 
-  "homepage_url": "http://add0n.com/index.html",
+  "homepage_url": "http://add0n.com/convert-to.html?from=pdf",
 
   "browser_action":{
     "default_icon": {
@@ -29,6 +29,11 @@
       "48": "data/icons/48.png",
       "64": "data/icons/64.png"
     }
+  },
+
+  "options_ui": {
+    "page": "data/options/index.html",
+    "chrome_style": true
   },
 
   "background": {

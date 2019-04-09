@@ -5,9 +5,11 @@ body {
   font: 400 13px/24px Roboto,sans-serif;
   margin: 10px;
   height: calc(100% - 20px);
+  display: flex;
+  flex-direction: column;
 }
 form {
-  height: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   user-select: none;
@@ -26,13 +28,13 @@ ul ~ label {
   justify-content: center;
   cursor: pointer;
   flex: 1;
-  border: dashed 1px red;
+  border: dashed 1px #ccc;
   background: url(drop.svg) no-repeat center center;
   background-size: 96px;
 }
 
 ul ~ label::before {
-  content: 'Drag document, PDF, or image file types here or click to browse';
+  content: attr(data-content);
   margin-top: calc(50vh + 30px);
 }
 li {
@@ -77,7 +79,7 @@ li [data-id="close"] {
   line-height: 20px;
 }
 li [data-id="close"]:hover {
-  background-color: red;
+  background-color: #ccc;
   color: #fff;
 }
 .drag-handle {

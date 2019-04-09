@@ -1,7 +1,8 @@
-/* globals Sortable, Convert */
+/* globals Sortable, Convert, config */
 'use strict';
 
 document.title = chrome.runtime.getManifest().name;
+document.querySelector('label').dataset.content = config.desc;
 
 var ul = document.querySelector('#list ul');
 Sortable.create(ul, {
@@ -65,7 +66,7 @@ document.addEventListener('click', e => {
 });
 
 var convert;
-document.addEventListener('submit', async(e) => {
+document.addEventListener('submit', async e => {
   e.preventDefault();
 
   document.body.dataset.disabled = true;
@@ -76,12 +77,12 @@ document.addEventListener('submit', async(e) => {
   const lis = [...document.querySelectorAll('#list li')];
   convert = new Convert();
   report('Requesting a new conversion');
-  await convert.open({
-    process: false,
-    options: {
-      merge: true
-    }
-  });
+  try {
+    await convert.open(config.options);
+  }
+  catch (e) {
+    return alert(e.message + '\n\n--\nUse can use your own free key to prevent usage limit rate. Go to the options page to set yours.');
+  }
   report('Uploading files');
   for (const li of lis) {
     const span = li.querySelector('[data-id=status]');

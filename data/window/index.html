@@ -2,8 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>PDF Combiner</title>
+    <title></title>
     <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body data-convert=false>
@@ -18,11 +19,11 @@
       </li></template>
       <div id="list">
         <ul></ul>
-        <label for="browse">
-        </label>
+        <label for="browse" data-content=""></label>
         <input type="file" id="browse" multiple>
       </div>
-      <div>
+      <div id="explore"></div>
+      <div style="margin-top: 10px;">
         <input type="button" id="reload" value="Reset">
         <input type="submit" value="Convert">
         <span id="info"></span>
@@ -30,7 +31,9 @@
     </form>
 
     <script src="Sortable.js"></script>
+    <script src="config.js"></script>
     <script src="index.js"></script>
     <script src="convert.js"></script>
+    <script async src="matched.js"></script>
   </body>
 </html>
