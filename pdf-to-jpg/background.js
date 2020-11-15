@@ -1,0 +1,1 @@
+../pdf-combiner/background.js

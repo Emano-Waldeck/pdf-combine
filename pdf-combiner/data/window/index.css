@@ -28,7 +28,7 @@ ul ~ label {
   justify-content: center;
   cursor: pointer;
   flex: 1;
-  border: dashed 1px #ccc;
+  border: dashed 1px #e4e4e4;
   background: url(drop.svg) no-repeat center center;
   background-size: 96px;
 }
@@ -57,7 +57,7 @@ li [data-id="name"] {
 li [data-id="status"],
 li [data-id="type"],
 li [data-id="size"] {
-  border-left: solid 1px #ccc;
+  border-left: solid 1px #e4e4e4;
 }
 li [data-id="type"] {
   width: 140px;
@@ -79,7 +79,7 @@ li [data-id="close"] {
   line-height: 20px;
 }
 li [data-id="close"]:hover {
-  background-color: #ccc;
+  background-color: #e4e4e4;
   color: #fff;
 }
 .drag-handle {
@@ -98,11 +98,28 @@ li [data-id="close"]:hover {
   display: none;
 }
 
-body[data-convert=false] [type=submit],
 body[data-disabled=true] .drag-handle,
 body[data-disabled=true] [data-cmd="remove"],
 body[data-disabled=true] label,
 body[data-disabled=true] [type=submit] {
   opacity: 0.5;
+  pointer-events: none;
+}
+
+#toolbar {
+  margin-top: 10px;
+}
+#toolbar input {
+  background-color: #dadada;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  min-width: 80px;
+  font-size: 100%;
+}
+body[data-convert=false] [type=submit],
+#toolbar input:disabled {
+  color: #a0a0a0;
+  text-shadow: 1px 1px #f2f2f2;
   pointer-events: none;
 }

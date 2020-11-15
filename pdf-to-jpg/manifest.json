@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "version": "0.1.4",
-  "name": "PDF Combine - Convert and Merge",
-  "description": "Convert and merge multiple files with different formats into a single PDF document",
+  "version": "0.1.1",
+  "name": "PDF to JPG  - Convert and Merge",
+  "description": "Convert PDF documents to high-quality JPG/JPEG images",
   "icons": {
     "16": "data/icons/16.png",
     "32": "data/icons/32.png",
@@ -17,7 +17,7 @@
     "downloads",
     "*://api2.online-convert.com/*"
   ],
-  "homepage_url": "https://add0n.com/convert-to.html?from=pdf",
+  "homepage_url": "https://add0n.com/convert-to.html?from=jpg",
   "browser_action": {},
   "options_ui": {
     "page": "data/options/index.html",
